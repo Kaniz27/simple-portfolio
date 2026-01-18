@@ -32,7 +32,7 @@ const Hero = () => {
   <h1 className="text-4xl md:text-4xl font-bold text-gray-900 leading-tight">
     Start learning from the{" "}
     <span className="text-teal-600">
-      world’s best institutions digital marketing seo
+      world’s best institutions digital marketing SEO
     </span>
   </h1>
 
@@ -59,23 +59,31 @@ const Hero = () => {
   </div>
 
   {/* Authors */}
-  <div className="flex items-center -space-x-4 mt-2">
+  <div className="flex items-center mt-4">
+  {/* Avatars */}
+  <div className="flex -space-x-3">
     {authors.map((_, i) => (
       <div
         key={i}
-        className="relative w-12 h-12 rounded-full border-2 border-white bg-white flex items-center justify-center"
+        className="relative w-12 h-12 rounded-full border-2 border-white bg-white flex items-center justify-center overflow-hidden"
       >
-        <FaUserCircle className="text-4xl text-gray-400" />
-        <span className="absolute -bottom-1 -right-1 w-5 h-5 bg-teal-600 text-white text-xs rounded-full flex items-center justify-center border-2 border-white">
+        {/* Avatar Icon */}
+        <FaUserCircle className="text-3xl text-gray-400" />
+
+        {/* Verified Tick */}
+        <span className="absolute bottom-0 right-0 w-5 h-5 bg-teal-600 text-white text-xs rounded-full flex items-center justify-center border-2 border-white">
           ✓
         </span>
       </div>
     ))}
-
-    <p className="text-gray-600 text-sm ml-6">
-      <strong>50+</strong> Customer Review
-    </p>
   </div>
+
+  {/* Reviews Text */}
+  <p className="text-gray-600 text-sm ml-4">
+    <strong>50+</strong> Customer Reviews
+  </p>
+</div>
+
 
   <p className="text-gray-900 text-xl md:text-2xl font-semibold">
     Explore <span className="text-teal-600">100+</span> Completed Project
@@ -95,9 +103,9 @@ const Hero = () => {
 
           {/* Floating Card */}
           <div className="absolute left-10 top-1/2 transform -translate-x-1/2 -translate-y-20 bg-white p-6 rounded-xl shadow-lg flex flex-col items-center">
-            <p className="text-teal-600 font-bold text-2xl">256+</p>
+            <p className="text-teal-600 font-bold text-2xl">100+</p>
             <p className="text-gray-500 text-xs uppercase tracking-wide">
-              Crashed Courses
+              Completed Campaigns
             </p>
           </div>
         </div>
