@@ -5,8 +5,8 @@ import CreativeAnalyticsSection from './aboutsection/CreativeAnalyticsSection';
 
 const page = () => {
     return (
-        <div className='mt-30'>
-           <StorySection></StorySection> 
+        <div className='mt-45'>
+           {/* <StorySection></StorySection>  */}
            <AboutMeSection></AboutMeSection>
            <CreativeAnalyticsSection></CreativeAnalyticsSection>
         </div>

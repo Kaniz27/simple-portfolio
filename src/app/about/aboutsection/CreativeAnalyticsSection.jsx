@@ -15,7 +15,7 @@ const CreativeAnalyticsSection = () => {
 
       {/* Text Content */}
       <div className="relative text-center px-4 md:px-8 text-white max-w-3xl">
-        <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-4">
+        <h2 className="text-3xl md:text-2xl lg:text-4xl font-bold mb-4">
           Combining Creativity With Great Analytics
         </h2>
         <p className="text-sm md:text-lg lg:text-xl">

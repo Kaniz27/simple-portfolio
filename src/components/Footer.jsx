@@ -3,13 +3,13 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa"
 
 const Footer = () => {
   return (
-    <footer className="bg-[#1f2b42] text-gray-300 py-12 px-4 md:px-8">
+    <footer className="bg-gradient-to-r from-[#1f2b42] via-[#26344e] to-[#38b7a6] text-gray-300 py-12 px-4 md:px-8">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         
         {/* Brand */}
         <div>
-          <h2 className="text-2xl font-bold text-white mb-4">Tareque Mahmud</h2>
-          <p className="text-gray-400">
+          <h2 className="text-2xl font-bold text-white mb-4">Tareque <span className="text-[#007867]">Mahmud</span></h2>
+          <p className="text-gray-200">
             Expert Digital Marketing Solutions for your business growth.
           </p>
         </div>
@@ -36,7 +36,7 @@ const Footer = () => {
         {/* Social Media */}
         <div>
           <h3 className="text-lg font-semibold text-white mb-4">Follow Us</h3>
-          <div className="flex gap-4 text-gray-400">
+          <div className="flex gap-4 text-gray-200">
             <a
               href="https://www.facebook.com/profile.php?id=61579989263581"
               target="_blank"
@@ -53,7 +53,7 @@ const Footer = () => {
       </div>
 
       {/* Footer Bottom */}
-      <div className="mt-12 text-center text-gray-500 text-sm">
+      <div className="mt-12 text-center text-gray-200 text-sm">
         &copy; {new Date().getFullYear()} Tareque_Mahmud. All rights reserved.
       </div>
     </footer>

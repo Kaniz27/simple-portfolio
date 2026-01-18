@@ -1,37 +1,110 @@
-import React from "react";
+"use client";
 
-const ContactSection = () => {
+import Image from "next/image";
+import heroImg from "../../public/unnamed.jpg";
+import { FaUserCircle } from "react-icons/fa";
+
+const Hero = () => {
+  const authors = [1, 2, 3, 4];
+
   return (
-    <div className="max-w-6xl  mt-30 mx-auto my-16 px-4 md:px-8">
-      <div className="flex flex-col lg:flex-row items-center gap-8">
-        {/* Left Image */}
-        <div className="flex-1 flex justify-center">
-          <img
-            src="/unnamed.jpg" // replace with your image path
-            alt="Portia Arthur"
-            className="w-full max-w-sm lg:max-w-md h-auto object-cover rounded-3xl shadow-lg"
-          />
-        </div>
+    <section className="flex bg-[#eff2f9] flex-col md:flex-row items-center justify-between px-8 md:px-24 py-16 mx-auto w-full">
+      
+      {/* Left Content */}
+<div className="flex-1 flex flex-col justify-center space-y-2">
+  
+  <p className="bg-white px-5 py-2 rounded-full text-lg flex items-center w-fit shadow">
+    <span className="bg-[#38b7a6] rounded-full text-white px-2 mr-2">
+      ⚡
+    </span>
+    Welcome to My Personal Porfolio
+  </p>
 
-        {/* Right Text */}
-        <div className="flex-1 flex flex-col justify-center bg-gray-100 p-8 rounded-3xl shadow-lg">
-          <h2 className="text-2xl md:text-2xl font-semibold mb-2 text-gray-700">
-            Hello, I am
-          </h2>
-          <h1 className="text-4xl md:text-4xl font-bold mb-4 text-gray-900">
-         Tareque Mahmud, 
-          </h1>
-          <h1 className="text-xl py-2">CEO & Founder</h1>
-          <p className="text-gray-600 mb-6">
-            Mauris elementum ex vitae arcu finibus, non dictum elit luctus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donecaturpis dui, tincidunt sagitti.
-          </p>
-          <button className="self-start px-6 py-3 bg-[#26344e] text-white font-semibold rounded-2xl hover:bg-[#1f2b42] transition">
-            Contact Me
-          </button>
+  <p className="text-xl">
+    Hi, I'm <br />
+    <span className="text-2xl pt-2 text-[#007867] font-bold">
+      Tareque Mahmud
+    </span>
+  </p>
+
+  <p>CEO & Founder</p>
+
+  <h1 className="text-4xl md:text-4xl font-bold text-gray-900 leading-tight">
+    Start learning from the{" "}
+    <span className="text-teal-600">
+      world’s best institutions digital marketing seo
+    </span>
+  </h1>
+
+  {/* Buttons */}
+  <div className="flex items-center gap-6">
+    <button
+      onClick={() =>
+        typeof window !== "undefined" &&
+        (window.location.href = "/contact")
+      }
+      className="bg-teal-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-teal-700 transition"
+    >
+      Get Started
+    </button>
+
+    <div className="flex items-center gap-2 cursor-pointer">
+      <span className="w-10 h-10 bg-teal-600 rounded-full flex items-center justify-center text-white text-lg">
+        ▶
+      </span>
+      <span className="text-gray-700 font-semibold">
+        Watch the video
+      </span>
+    </div>
+  </div>
+
+  {/* Authors */}
+  <div className="flex items-center -space-x-4 mt-2">
+    {authors.map((_, i) => (
+      <div
+        key={i}
+        className="relative w-12 h-12 rounded-full border-2 border-white bg-white flex items-center justify-center"
+      >
+        <FaUserCircle className="text-4xl text-gray-400" />
+        <span className="absolute -bottom-1 -right-1 w-5 h-5 bg-teal-600 text-white text-xs rounded-full flex items-center justify-center border-2 border-white">
+          ✓
+        </span>
+      </div>
+    ))}
+
+    <p className="text-gray-600 text-sm ml-6">
+      <strong>50+</strong> Customer Review
+    </p>
+  </div>
+
+  <p className="text-gray-900 text-xl md:text-2xl font-semibold">
+    Explore <span className="text-teal-600">100+</span> Completed Project
+  </p>
+</div>
+
+
+      {/* Right Image */}
+      <div className="flex-1 relative mt-10 md:mt-0 flex justify-center">
+        <div className="relative group">
+          <Image
+            src={heroImg}
+            alt="Hero Image"
+            className="rounded-4xl w-100 mt-16 transition-transform duration-500 group-hover:scale-105"
+            priority
+          />
+
+          {/* Floating Card */}
+          <div className="absolute left-10 top-1/2 transform -translate-x-1/2 -translate-y-20 bg-white p-6 rounded-xl shadow-lg flex flex-col items-center">
+            <p className="text-teal-600 font-bold text-2xl">256+</p>
+            <p className="text-gray-500 text-xs uppercase tracking-wide">
+              Crashed Courses
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+
+    </section>
   );
 };
 
-export default ContactSection;
+export default Hero;

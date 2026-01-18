@@ -4,12 +4,12 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa"
 
 const ContactPage = () => {
   return (
-    <div className=" mt-30  my-16 px-4 md:px-8">
-        <GetConnectedSection></GetConnectedSection>
+    <div className="mt-30 my-16 px-4 md:px-8">
+      {/* <GetConnectedSection /> */}
       <div className="flex flex-col mx-auto max-w-6xl lg:flex-row gap-12">
-        
+
         {/* Left: Contact Info */}
-        <div className="flex-1  bg-gray-100 rounded-3xl p-8 shadow-lg flex flex-col gap-6">
+        <div className="flex-1 bg-gray-100 rounded-3xl p-8 shadow-lg flex flex-col gap-6">
           <h2 className="text-3xl font-bold text-gray-900">Contact Info</h2>
           <p className="text-gray-700">
             Hey, let's talk. If you have any questions simply use the following contact details.
@@ -34,13 +34,13 @@ const ContactPage = () => {
                 href="https://www.facebook.com/profile.php?id=61579989263581"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-blue-600"
+                className="hover:text-blue-600 transition-colors text-xl"
               >
                 <FaFacebookF />
               </a>
-              <a href="#" className="hover:text-blue-400"><FaTwitter /></a>
-              <a href="#" className="hover:text-pink-500"><FaInstagram /></a>
-              <a href="#" className="hover:text-blue-700"><FaLinkedin /></a>
+              <a href="#" className="hover:text-sky-400 transition-colors text-xl"><FaTwitter /></a>
+              <a href="#" className="hover:text-pink-500 transition-colors text-xl"><FaInstagram /></a>
+              <a href="#" className="hover:text-blue-700 transition-colors text-xl"><FaLinkedin /></a>
             </div>
           </div>
         </div>
@@ -53,21 +53,21 @@ const ContactPage = () => {
               <input
                 type="text"
                 placeholder="Your Name"
-                className="p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#26344e]"
+                className="p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#007867]"
               />
               <input
                 type="email"
                 placeholder="Your Email"
-                className="p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#26344e]"
+                className="p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#007867]"
               />
               <textarea
                 placeholder="Your Message"
                 rows="5"
-                className="p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#26344e]"
+                className="p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#007867]"
               ></textarea>
               <button
                 type="submit"
-                className="bg-[#26344e] text-white px-6 py-3 rounded-2xl font-semibold hover:bg-[#1f2b42] transition"
+                className="bg-[#007867] hover:bg-[#005f50] text-white px-6 py-3 rounded-2xl font-semibold transition"
               >
                 Send Message
               </button>

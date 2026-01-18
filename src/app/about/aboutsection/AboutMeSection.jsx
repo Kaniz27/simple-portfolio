@@ -2,7 +2,8 @@ import React from "react";
 
 const AboutMeSection = () => {
   return (
-    <div className="max-w-6xl mx-auto my-8 px-4 md:px-8">
+    <div className="bg-[#eff2f9] p-6">
+        <div className="max-w-6xl mx-auto my-8 px-4 md:px-8">
       <div className="flex flex-col lg:flex-row gap-8">
         {/* Left Image */}
         <div className="flex-1 flex items-center justify-center">
@@ -25,9 +26,10 @@ const AboutMeSection = () => {
           <p className="text-gray-600 mb-6">
             Nam ac purus eget lorem cursus suscipit id eu odio. Nam efficitur dignissim nulla, eget tempus metus. Sed fermentum molestie risus, non bibendum ipsum dapibus non.
           </p>
-          <p className="text-gray-800 font-semibold mt-4">— Tareque_Mahmud,CEO & Founder </p>
+          <p className="text-[#00786f] font-semibold mt-4">— Tareque_Mahmud,CEO & Founder </p>
         </div>
       </div>
+    </div>
     </div>
   );
 };
